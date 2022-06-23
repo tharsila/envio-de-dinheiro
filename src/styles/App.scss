@@ -1,0 +1,49 @@
+@import 'index';
+
+main {
+  .user-container {
+    background: linear-gradient(#31324f,#1f202e);
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+
+    &:first-child {
+      border-top: 1px solid #fff;
+    }
+
+    .user-content {
+      @include container;
+      @include flex-center;
+      justify-content: space-between;
+  
+      .user-info {
+        @include flex-center;
+  
+        .user-img {
+          margin-right: 1rem;
+
+          img {
+            border-radius: 50%;
+          }
+        }
+        .user-data {
+          font-size: 1.3rem;
+          font-weight: 300;
+          color: #fff;
+
+          span:first-child {
+            line-height: 2.5rem;
+          }
+        }
+      }
+
+      .btn {
+        button {
+          padding: 2px 8px;
+          font-size: 1rem;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  } 
+}
