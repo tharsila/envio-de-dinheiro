@@ -17,8 +17,9 @@
     background: #fff;
     position: relative;
     padding-bottom: 0.6rem;
-   /*  width: 24%; */
+    width: 45%;
     min-width: 300px;
+    min-height: 152px;
 
     .close {
       position: absolute;
@@ -38,7 +39,7 @@
     .modal-content {
       @include flex-center;
       flex-direction: column;
-      
+
       span {
         background: #474971;
         padding: 10px 20px;
@@ -48,14 +49,20 @@
          color: #c8d63c;
         }
       }
+      
+      form {
+        @include flex-center;
+        flex-direction: column;
 
-      input {
-        margin: 1rem 0 0.5rem;
-        outline: none;
-      }
+        input {
+          margin: 1rem 0 0.5rem;
+          outline: none;
+        }
+  
+        select {
+          margin-bottom: 0.8rem;
+        }
 
-      select {
-        margin-bottom: 0.8rem;
       }
 
     }
