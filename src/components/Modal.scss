@@ -1,0 +1,63 @@
+@import '../styles/mixin';
+@import '../styles/App';
+
+/* #474971 */
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  @include flex-center;
+
+  .modal-container {
+    background: #fff;
+    position: relative;
+    padding-bottom: 0.6rem;
+   /*  width: 24%; */
+    min-width: 300px;
+
+    .close {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      font-weight: 700;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background:#c8d63c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .modal-content {
+      @include flex-center;
+      flex-direction: column;
+      
+      span {
+        background: #474971;
+        padding: 10px 20px;
+        color: #fff;
+        width: 100%;
+        strong {
+         color: #c8d63c;
+        }
+      }
+
+      input {
+        margin: 1rem 0 0.5rem;
+        outline: none;
+      }
+
+      select {
+        margin-bottom: 0.8rem;
+      }
+
+    }
+  }
+}
