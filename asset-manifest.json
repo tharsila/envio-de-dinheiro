@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/envio-de-dinheiro/static/css/main.3b00a4d8.css",
+    "main.js": "/envio-de-dinheiro/static/js/main.f2357d0a.js",
+    "index.html": "/envio-de-dinheiro/index.html",
+    "main.3b00a4d8.css.map": "/envio-de-dinheiro/static/css/main.3b00a4d8.css.map",
+    "main.f2357d0a.js.map": "/envio-de-dinheiro/static/js/main.f2357d0a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b00a4d8.css",
+    "static/js/main.f2357d0a.js"
+  ]
+}
