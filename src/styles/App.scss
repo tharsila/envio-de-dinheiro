@@ -14,12 +14,22 @@ main {
       @include container;
       @include flex-center;
       justify-content: space-between;
+      @include mobile {
+        flex-direction: column;
+      }
   
       .user-info {
         @include flex-center;
+        @include mobile {
+          flex-direction: column;
+          text-align: center;
+        }
   
         .user-img {
           margin-right: 1rem;
+          @include mobile {
+            margin: 0;
+          }
 
           img {
             border-radius: 50%;
@@ -37,6 +47,9 @@ main {
       }
 
       .btn {
+        @include mobile {
+          margin-top: 1rem;
+        }
         button {
           padding: 2px 8px;
           font-size: 1rem;

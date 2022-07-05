@@ -1,11 +1,10 @@
 @import '../styles/mixin';
 @import '../styles/App';
 
-/* #474971 */
-
 .modal {
   width: 100vw;
   height: 100vh;
+  padding: 0 1rem;
   background-color: rgba(0,0,0,0.05);
   position: fixed;
   top: 0;
@@ -19,7 +18,12 @@
     padding-bottom: 0.6rem;
     width: 45%;
     min-width: 300px;
+    max-width: 600px;
     min-height: 152px;
+    @include mobile {
+      width: 100%;
+      max-width: 315px;
+    }
 
     .close {
       position: absolute;

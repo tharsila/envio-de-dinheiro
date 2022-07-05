@@ -8,3 +8,9 @@
   max-width: 1240px;
   margin: 0 auto;
 }
+
+@mixin mobile {
+  @media (max-width: 695px) {
+    @content;
+  }
+}
