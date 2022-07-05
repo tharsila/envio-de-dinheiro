@@ -46,7 +46,7 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+   
     const postInfo = {
       name,
       idUser,
@@ -76,6 +76,24 @@ function App() {
     } 
   }
 
+  const maskedPrice = (event) => {
+    if (/[0-9]+/g.test(event.key) && event.target.value.length < 14) {
+      event.target.value += event.key;
+    }
+
+    const input = Number(event.target.value.replace(/[^0-9]+/g, "") / 100);
+    const formatInput = input.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+      minimumFractionDigits: 2,
+    });
+
+    event.target.value = formatInput;
+
+    setPrice(formatInput);
+    
+  };
+  
   return (
     <main>
       { 
@@ -110,18 +128,17 @@ function App() {
                   type="text" 
                   placeholder="R$ 0,00" 
                   inputMode='numeric' 
-                  onChange={(event) => setPrice(event.target.value)} />
+                  onChange={maskedPrice} 
+                />
 
                 <select 
                   defaultValue={'default'} 
                   onChange={(event) => setSelect(event.target.value)}>
                   <option value={'default'} disabled>Escolha um cartão</option>
-                  {/* {cards.map((card, index) => (
-                  <option key={index} value={[JSON.stringify(card), index]}>Cartão com o final {card.card_number.slice(-3)}</option>))} */}
                   <option value="1">Cartão com o final {cards[0].card_number.slice(-3)}</option>
                   <option value="2">Cartão com o final {cards[1].card_number.slice(-3)}</option>
                 </select>
-                <button disabled={select === '' || price === ''}>Pagar</button>
+                <button disabled={select === '' || price === '' || price === 'R$ 0,00'}>Pagar</button>
               </form>
             </>
             )
