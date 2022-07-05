@@ -145,7 +145,7 @@ function App() {
             :(
               <>
                 <span>Recibo de Pagamento</span>
-                <p style={{'marginTop': '2rem'}}>{message}</p>
+                <p style={{'marginTop': '2rem', 'textAlign': 'center'}}>{message}</p>
               </>
             )
           }
